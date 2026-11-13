@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:synthetic:demo-site:v1",
+  "type": "object",
+  "required": ["id", "displayName", "tenantId", "version"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "pattern": "^demo_[a-z0-9_]+$"},
+    "displayName": {"type": "string", "minLength": 1},
+    "tenantId": {"type": "string", "minLength": 1},
+    "version": {"type": "integer", "minimum": 1}
+  }
+}
